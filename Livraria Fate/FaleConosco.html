@@ -1,0 +1,340 @@
+<html>
+    <head>
+        <title>Livraria Fate</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00BFFF; position: fixed; z-index: 40; width: 100%;>
+            <a class="navbar-brand" href="#"></a>
+            <img src="img/Fate.png" width="60" height="30" alt="">
+            <div class="name"> <b> Livraria Fate </b> </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html"><b>Home</b><span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>Produtos</b>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #00BFFF;">
+                    <a class="dropdown-item" href="livros.html">Livros</a>
+                    <a class="dropdown-item" href="hqs.html">HQs</a>
+                    <a class="dropdown-item" href="manga.html">Mangás</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="produto.html">Todos</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="quemSomos.html"><b>Quem Somos?</b></a>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="CompreAqui.html"><b>Compre Aqui</b></a>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="FaleConosco.html"><b>Fale Conosco</b></a>
+                      </li>
+                
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </nav><br><br>
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/banner1.webp" alt="Primeiro Slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner2(2).webp" alt="Segundo Slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner3.webp" alt="Terceiro Slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="img/banner4.webp" alt="Quarto Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner5.webp" alt="Quarto Slide">
+                  </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div><br><br>
+
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+               <div class="fale"> <b> Fale Conosco. DIga seu problema para resolvermos! </b> </div><br>
+              <div class="fale2"> Este é o seu canal de comunicação direta com a Livraria Cultura. Escolha o assunto e envie sua mensagem para nós. </div>
+              </div>
+              
+            </div><br><br>
+
+            <div class="row">
+              <div class="col-10">
+                <form>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email:</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputPassword4">Nome:</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="Nome">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress">Telefone 1:</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Telefone 1">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress">Telefone 2:</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Telefone 2:">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputAddress2">Endereço:</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Endereço">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity">Cidade</label>
+                      <input type="text" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="inputEstado">Qual o seu problema?</label>
+                      <select id="inputEstado" class="form-control">
+                        <option>Problema na Conta</option>
+                        <option>Problema na compra</option>
+                        <option>Devolução</option>
+                        <option>Cancelar pedido</option>
+                        <option>Duvidas</option>
+                        <option>Segestão</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <label for="inputCEP">CEP</label>
+                      <input type="text" class="form-control" id="inputCEP">
+                    </div>
+                  </div>
+                  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10">
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Não definido
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                  <label class="form-check-label" for="exampleRadios2">
+                   Mulher
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                  <label class="form-check-label" for="exampleRadios2">
+                   Homem
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Lembrar de mim
+                  </label>
+                </div>
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-10">
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    <button type="reset" class="btn btn-primary"  onClick="alert('Seu email foi enviado com sucesso!'); return true">Enviar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<br><br><br>
+
+            <div class="row">
+              <div class="col-sm">
+
+                <div class="loja">Deseja nós visitar? Aqui está alocalização das nossas lojas!</div>
+
+              </div>
+            </div><br>
+              <div class="row">
+
+                  <div class="col-sm">
+
+                  <div class="mapa"> Loja de Guaianazes </div><br>
+    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.428026944518!2d-46.40186168538411!3d-23.55306606717036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce65086cafaf55%3A0xf7da96815e7611da!2sETEC%20de%20Guaianazes!5e0!3m2!1spt-BR!2sbr!4v1574462546109!5m2!1spt-BR!2sbr" width="530" height="350" frameborder="0" allowfullscreen=""></iframe>
+    
+                  </div>
+                  <div class="col-sm">
+
+                    <div class="mapa"> Loja de Itaquera </div><br>
+      
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58518.887403301436!2d-46.43469264606677!3d-23.55297853221661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e622db57c4f%3A0x3de99bb691d3dc68!2sShopping%20Metr%C3%B4%20Itaquera!5e0!3m2!1spt-BR!2sbr!4v1574463825379!5m2!1spt-BR!2sbr" width="530" height="350" frameborder="0" allowfullscreen=""></iframe>
+      
+                    </div>
+
+                </div><br>
+
+                <div class="row">
+
+                  <div class="col-sm">
+
+                  <div class="mapa"> Loja de tatuapé </div><br>
+    
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234076.36895253495!2d-46.53976038496815!3d-23.552518450181488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ec220e5e68b%3A0x795101cf0926d612!2sShopping%20Metr%C3%B4%20Tatuap%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1574464082020!5m2!1spt-BR!2sbr" width="530" height="350" frameborder="0"  allowfullscreen=""></iframe>
+    
+                  </div>
+                  <div class="col-sm">
+
+                    <div class="mapa"> Loja de Aricanduva </div><br>
+      
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0724951528573!2d-46.50421698538386!3d-23.56583966764202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce676edd286c5f%3A0x4b56801d4922f046!2sShopping%20Aricanduva!5e0!3m2!1spt-BR!2sbr!4v1574464549741!5m2!1spt-BR!2sbr" width="530" height="350" frameborder="0" allowfullscreen=""></iframe>
+      
+                    </div>
+
+                </div><br><br>
+
+                <div class="row">
+
+                  <div class="col-sm">
+
+                 <center> <button type="button" class="btn btn-outline-info" style="width: 200px;"><b>Ver em outras regiões</b></button></center>
+
+                </div>
+
+                </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <br><br><br><br><br>
+
+
+
+          <div class="rodape" style="background: #1e2229; height: 470px; width: 100%;">
+
+            <br><br>
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-sm">
+
+               
+                      
+                      <div class="rodapeLetra"><b>Central de Dúvidas Online</b><br>
+                       <div class="rodapeLetra2"> <p> Utilize nosso FAQ, chat online ou email para<br> solucionar suas dúvidas.</p> </div> </div><br>
+
+                       <div class="rodapeLetra"><b>Central de Dúvidas Online</b></div>
+                        <div class="rodapeLetra2"> <p> Grande São Paulo<br> (11) 2388-8247 </p> </div> 
+
+                        <div class="rodapeLetra2"> <p> Rio de Janeiro<br> 0800-730-2557 </p> </div> 
+
+                        <div class="rodapeLetra2"> <p> Demais regiões<br> 3003-0009 </p> </div> 
+                </div>
+
+                <div class="col-sm">
+
+               
+                      
+                    <div class="rodapeLetra"><b>Nossas Lojas</b><br>
+                     <div class="rodapeLetra2"> <p> Encontre uma loja Saraiva mais perto<br> de você.</p> </div> </div><br>
+
+                     <div class="rodapeLetra"><b>Televendas</b></div>
+                      <div class="rodapeLetra2"> <p> Todas as regiões<br> 3003-0009 </p> </div> 
+
+                      <div class="rodapeLetra2"> <p> Vendas Corporativas<br> (11) 2388-8245 </p> </div> 
+
+                      
+              </div>
+
+              <div class="col-sm">
+
+               
+                      
+                  <div class="rodapeLetra"><b>Trabalhe Conosco</b>
+                   <div class="rodapeLetra2"> <p>Venha fazer parte do nosso time!<br>E venha ser feliz!</p> </div> </div><br>
+
+                   <div class="rodapeLetra"><b>Institucional</b></div>
+                    <div class="rodapeLetra2"> <p> <a href="#"> Política de Venda e Troca </a> </p> </div> 
+
+                    <div class="rodapeLetra2"> <p> <a href="#"> Relações com Investidores </a> </p> </div> 
+
+                    <div class="rodapeLetra2"> <p> <a href="#"> Eventos </a> </p> </div> 
+
+                    <div class="rodapeLetra2"> <p> <a href="#"> Termos e Condições de Compra </a> </p> </div> 
+            </div>
+
+              </div><br><br>
+
+            </div>
+
+             <div class="fn"> <center> Todos os direitos reservado aos devidos criadores: E3ND e Trompetista ©  </center> </div> 
+ 
+          </div>
+          
+          
+
+
+
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

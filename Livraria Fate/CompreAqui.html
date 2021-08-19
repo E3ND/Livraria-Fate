@@ -1,0 +1,728 @@
+<html>
+    <head><title>Livraria Fate</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilo.css">
+    
+    </head>
+    <body>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00BFFF; position: fixed; z-index: 40; width: 100%;>
+            <a class="navbar-brand" href="#"></a>
+            <img src="img/Fate.png" width="60" height="30" alt="">
+            <div class="name"> <b> Livraria Fate </b> </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html"><b>Home</b><span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <b>Produtos</b>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #00BFFF;">
+                    <a class="dropdown-item" href="livros.html">Livros</a>
+                    <a class="dropdown-item" href="hqs.html">HQs</a>
+                    <a class="dropdown-item" href="manga.html">Mangás</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="produto.html">Todos</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="quemSomos.html"><b>Quem Somos?</b></a>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="CompreAqui.html"><b>Compre Aqui</b></a>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="FaleConosco.html"><b>Fale Conosco</b></a>
+                      </li>
+                
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </nav><br><br>
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="img/banner1.webp" alt="Primeiro Slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner2(2).webp" alt="Segundo Slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/banner3.webp" alt="Terceiro Slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="img/banner4.webp" alt="Quarto Slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/banner5.webp" alt="Quarto Slide">
+                  </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Próximo</span>
+            </a>
+          </div><br>
+
+        </form> 
+        <script type='text/javascript'>
+          var valorTotal = 0, hxh = 0, par = 0; 
+          
+      
+          function salvar(){
+              document.getElementById('txtNomeCliente').value = document.getElementById('txtNome').value;
+              document.getElementById('txtCp').value = document.getElementById('txtCpf').value;
+              document.getElementById('txtEmail').value = document.getElementById('exampleInputEmail1').value;
+              var i;
+              for(i = 0; i<document.formVenda.rdEntrega.length; i++){
+                  if(document.formVenda.rdEntrega[i].checked)
+                  break;
+      
+      
+              }
+              if(parseInt(document.formVenda.rdEntrega[i].value)==1){
+                 document.getElementById('txtEntregaSelec').value = "Correios - 20 Dias Uteis";
+                 hxh = parseFloat(12);
+              }   
+              else if(parseInt(document.formVenda.rdEntrega[i].value)==2){
+                 document.getElementById('txtEntregaSelec').value = "SEDEX - 7 dias Uteis";
+                 hxh = parseFloat(20);
+              }  
+              else if(parseInt(document.formVenda.rdEntrega[i].value)==3){
+                 document.getElementById('txtEntregaSelec').value = "A Retirar";
+                 hxh = parseFloat(0);
+              }   
+                 //select
+              
+                
+                 var indice = document.formVenda.slcFormaPagto.selectedIndex;
+                  document.getElementById('txtFormaSelec').value = document.getElementById('slcFormaPagto').value;
+          
+                  if(document.getElementById('txtFormaSelec').value == 1){
+                      document.getElementById('txtFormaSelec').value = "Crédito"
+
+                        if(document.getElementById('slcFormaPagto2').value == 1){
+                            document.getElementById('parcelaSelec').value = "1"
+                            par = parseFloat(0);
+                            document.getElementById('txtFormaSelec2').value = "R$ 0,00"
+                            
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 2){
+                            document.getElementById('parcelaSelec').value = "2"
+                            par = parseFloat(1);
+                            document.getElementById('txtFormaSelec2').value = "R$ 2,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 3){
+                            document.getElementById('parcelaSelec').value = "3"
+                            par = parseFloat(2);
+                            document.getElementById('txtFormaSelec2').value = "R$ 3,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 4){
+                            document.getElementById('parcelaSelec').value = "4"
+                            par = parseFloat(4);
+                            document.getElementById('txtFormaSelec2').value = "R$ 4,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 5){
+                            document.getElementById('parcelaSelec').value = "5"
+                            par = parseFloat(6);
+                            document.getElementById('txtFormaSelec2').value = "R$ 6,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 6){
+                            document.getElementById('parcelaSelec').value = "6"
+                            par = parseFloat(10);
+                            document.getElementById('txtFormaSelec2').value = "R$ 10,00"
+                        }
+                      
+                  }
+      
+                  else if(document.getElementById('txtFormaSelec').value == 2){
+                      document.getElementById('txtFormaSelec').value = "Boleto"
+                      if(document.getElementById('slcFormaPagto2').value == 1){
+                            document.getElementById('parcelaSelec').value = "1"
+                            par = parseFloat(2);
+                            document.getElementById('txtFormaSelec2').value = "R$ 2,00"
+                            
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 2){
+                            document.getElementById('parcelaSelec').value = "2"
+                            par = parseFloat(4);
+                            document.getElementById('txtFormaSelec2').value = "R$ 4,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 3){
+                            document.getElementById('parcelaSelec').value = "3"
+                            par = parseFloat(6);
+                            document.getElementById('txtFormaSelec2').value = "R$ 6,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 4){
+                            document.getElementById('parcelaSelec').value = "4"
+                            par = parseFloat(8);
+                            document.getElementById('txtFormaSelec2').value = "R$ 8,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 5){
+                            document.getElementById('parcelaSelec').value = "5"
+                            par = parseFloat(10);
+                            document.getElementById('txtFormaSelec2').value = "R$ 10,00"
+                        }
+                        if(document.getElementById('slcFormaPagto2').value == 6){
+                            document.getElementById('parcelaSelec').value = "6"
+                            par = parseFloat(15);
+                            document.getElementById('txtFormaSelec2').value = "R$ 15,00"
+                        }
+                      
+                  }
+      
+      
+      
+          }
+
+         function reiniciar(){
+
+           alert('Sua compra foi efetuada'); return true
+
+         }
+      
+          function addProduto(){
+      
+              var tabela = document.getElementById('tbProduto');
+      
+              var td1 = document.createElement("td");
+              var td2 = document.createElement("td");
+              var td3 = document.createElement("td");
+              var td4 = document.createElement("td");
+            
+      
+              var tr = document.createElement("tr");
+              
+              var cod = parseInt(document.getElementById('codProduto').value);
+              switch(cod){
+                  case 1:
+                      var descricao = "Os Pergaminhos Vermelhos Da Magia (Vol. 1 As Maldições Ancestrais).";
+                      var preco = "R$ 39,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*39.90);
+                      break;
+                   case 2:
+                      var descricao = "Como Passar na OAB - 1º Fase - 5.000 Questões Comentadas - 16ª Ed. 2020";
+                      var preco = "R$ 150,00 ";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*150.00 );
+                      break;
+                  case 3:
+                      var descricao = "Essa Gente";
+                      var preco = "R$ 49,99";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*49.99);
+                      break;
+                  case 4:
+                      var descricao = "Fazendo Meu Filme - Lado B - Acompanha Bloco De Anotações";
+                      var preco = "R$ 44,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)* 44.90);
+                      break;
+                  case 5:
+                      var descricao = "Box Alice País Das Maravilhas - 3 Volumes";
+                      var preco = "R$ 79,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)* 79.90);
+                      break;
+                  case 6:
+                      var descricao = "As Quatro Rainhas Mortas + Cards E Mapa";
+                      var preco = "R$44,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*44.90);
+                      break; 
+                  case 7:
+                      var descricao = "O Amor Não é Óbvio - Acompanha Pôster";
+                      var preco = "R$40,00";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*40.00);
+                      break;
+                  case 8:
+                      var descricao = "Edgar Allan Poe Histórias Extraordinárias";
+                      var preco = "R$ 39,90 ";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*39.90 );
+                      break;
+                  case 9:
+                      var descricao = "Citrus - Vol. 1";
+                      var preco = "R$10,00";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*10.00);
+                      break;
+                  case 10:
+                      var descricao = "Black Hammer: O Evento, VOL.2";
+                      var preco = "R$35,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*35.90);
+                      break;
+                   case 11:
+                      var descricao = "Toradora! - VOL 1";
+                      var preco = "R$15,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*15.90);
+                      break;
+                  case 12:
+                      var descricao = "Cruzada Infinita";
+                      var preco = "R$59,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*59.90);
+                      break;
+                  case 13:
+                      var descricao = "Harry Potter E o Cálice de Fogo - EDIÇÃO ILUSTRADA";
+                      var preco = "R$189,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*189.90);
+                      break;
+                  case 14:
+                      var descricao = "Percy Jackson e Os Olimpianos - Vol.1 - O ladrão de Raios";
+                      var preco = "R$35,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*35.90);
+                      break;
+                  case 15:
+                      var descricao = "O iluminado";
+                      var preco = "R$46,32";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*46.32);
+                      break; 
+                  case 16:
+                      var descricao = "Supernatural - Entre Anjos e Demônios";
+                      var preco = "R$49,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*49.90);
+                      break;
+                  case 17:
+                      var descricao = "A cinco Passos de Voce";
+                      var preco = "R$39,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*39.90);
+                      break;
+                  case 18: // trocar
+                      var descricao = "Batman: A Corte das Corujas";
+                      var preco = "R$47,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*47.90);
+                      break;
+                  case 19:
+                      var descricao = "Um Amor Conveniente";
+                      var preco = "R$39,80";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*39.80);
+                      break;
+                   case 20:
+                      var descricao = "Eleanor & Park - Slim";
+                      var preco = "R$24,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*24.90);
+                      break;
+                  case 21:
+                      var descricao = "Fairy Tail - Vol. 1";
+                      var preco = "R$29,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*29.90);
+                      break;
+                  case 22:
+                      var descricao = "Bleach Vol. 1";
+                      var preco = "R$58,10";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*58.10);
+                      break;
+                  case 23:
+                      var descricao = "Fate/Zero - Vol. 1";
+                      var preco = "R$24,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*24.90);
+                      break;
+                  case 24:
+                      var descricao = "Demon Slayer: Kimetsu no Yaiba, Vol. 3";
+                      var preco = "R$46,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*46.90);
+                      break; 
+                  case 25:
+                      var descricao = "Tokyo Ghoul Vol. 1";
+                      var preco = "R$20,00";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*20.00);
+                      break;
+                  case 26:
+                      var descricao = "Another ";
+                      var preco = "R$34,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*34.90);
+                      break;
+                  case 27:
+                      var descricao = "One Punch Man Vol. 7";
+                      var preco = "R$43,40";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*43.40);
+                      break;
+                  case 28:
+                      var descricao = "Kakegurui - Compulsive Gambler - Vol. 1";
+                      var preco = "R$44,60";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*44.60);
+                      break;
+                  case 29://pulou pulou kira. nani? Como assim trompetista?
+                      var descricao = "One Punch Man Vol. 7";
+                      var preco = "R$43,40";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*43.40);
+                      break;
+                  case 30:
+                      var descricao = "Nisekoi False Love Vol. 1";
+                      var preco = "R$38,70";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*38.70);
+                      break;
+                  case 31:
+                      var descricao = "Boku no Hero Academia - Vol. 1";
+                      var preco = "R$15,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*15.90);
+                      break;   
+                  case 32://pulou kira
+                      var descricao = "";
+                      var preco = "R$43,40";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*43.40);
+                      break;
+                  case 33:
+                      var descricao = "Star Wars - A Guerra nas Estrelas - Vol. 2";
+                      var preco = "R$16,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*16.90);
+                      break;
+                  case 34:
+                      var descricao = "Senhor Milagre Vol. 2";
+                      var preco = "R$24,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*24.90);
+                      break;   
+                  case 35:
+                      var descricao = "League Of Legends: Ashe - Mãe De Guerra";
+                      var preco = "R$49,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*49.90);
+                      break;          
+                  case 36:
+                      var descricao = "Thor - The Goddess Of Thurder - Vol. 1";
+                      var preco = "R$83,44";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*83.44);
+                      break;          
+                  case 37:
+                      var descricao = "Universo X";
+                      var preco = "R$124,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*124.90);
+                      break;          
+                  case 38:
+                      var descricao = "Star Wars - A Queda De Vader";
+                      var preco = "R$22,90";
+                      var qtde = document.getElementById('qtde').value;
+                      valorTotal += (parseFloat(qtde)*22.90);
+                      break;          
+                          
+              }
+              var descricaoNode = document.createTextNode(cod);
+              var precoNode = document.createTextNode(preco);
+              var qtdeNode = document.createTextNode(qtde);
+              var cod = document.createTextNode(descricao);
+      
+      
+              //insere um elemento
+           
+              td1.appendChild(descricaoNode);
+              td3.appendChild(precoNode);
+              td4.appendChild(qtdeNode);
+              td2.appendChild(cod);
+             
+      
+              tr.appendChild(td1);
+              tr.appendChild(td2);
+              tr.appendChild(td3);
+              tr.appendChild(td4);
+            
+      
+      
+              tabela.appendChild(tr);
+            
+              document.getElementById('codProduto').value = '';
+              document.getElementById('qtde').value = '';
+      
+              document.getElementById('codProduto').focus();
+      
+              document.getElementById('txtValorTotal').value = (valorTotal + hxh + par).toFixed(2);
+              
+      
+          }
+
+          </script>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-10">
+          <br>
+        
+          
+<div class="formula">   
+
+<form name='formVenda'>
+<div class="for"><b>Preencha o formulário para fazer a compra! </b> </div><br>
+<label class="labe"> Nome Completo:</label>
+<input type="text" class="form-control nome" placeholder="Nome" id='txtNome'>
+
+<br>
+<label class="labe"> CPF:</label>
+<input type="text" class="form-control cpf" placeholder="Cpf" id='txtCpf'>
+
+<br>
+<label class="labe"> Email:</label>
+<input type="email" class="form-control email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+<br>  
+
+
+
+<label class="labe">Cód do Produto:</label>
+<input type="text" class="form-control cod" placeholder="" id='codProduto'>
+<br>
+
+
+
+<label class="labe">Quantidade:</label>
+<input type="text" class="form-control qtde" placeholder="" id='qtde'>
+
+
+<br>
+<label class="labe">Como deseja receber seus produtos:</label> <br>
+
+
+
+<fieldset class="form-group sele">
+<div class="row">
+ 
+  <div class="col-8">
+    <div class="form-check">
+      <input class="form-check-input" type="radio"  id='rdEntrega' name='rdEntrega' value ='1'checked>
+      <label class="form-check-label" for="gridRadios1">
+        Correios Entrega (R$ 12,00)
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio"  id='rdEntrega' name='rdEntrega'  value ='2'>
+      <label class="form-check-label" for="gridRadios2"></label>
+        Correios SEDEX (R$20,00)
+      </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio"  id='rdEntrega' name='rdEntrega'  value ='3'>
+        <label class="form-check-label" for="gridRadios2"></label>
+          A Retirar (R$ 0,00)
+        </label>
+      </div>
+   
+  </div>
+</div>
+</fieldset>
+
+
+
+
+
+
+<br><br>
+
+
+<label class="labe">Forma de Pagamento:</label>
+<select class="form-control se" id='slcFormaPagto' name='slcFormaPagto'>
+
+<option value='1'>Crédito</option>
+<option value='2'>Boleto</option>
+</select>
+<br>
+
+<label class="labe">Quantidade de Parcelas:</label>
+<select class="form-control par" id='slcFormaPagto2' name='slcFormaPagto'>
+<option value='1'>1</option>
+
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+<option value='6'>6</option>
+</select>
+<br>
+
+
+
+
+
+<button type="button" class="btn btn-outline-info" onclick="salvar(), addProduto()" style="width: 100px;">Adicionar</button>
+
+</form>
+</div><br><br>
+
+<table class="table" id='tbProduto'>
+    <thead class="thead" style="background: #00BFFF;">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome do produto</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Quantidade</th>
+      </tr>
+    </thead>
+                      
+                      </table>
+<br>
+<br>
+<br>
+<br>
+<div class="resumo">
+<div class="resumo2"> <b> Resumo da Sua Compra </b> </div><br><br>
+<label class="labe">Cliente:</label>
+<input type="text" class="form-control cliente"id='txtNomeCliente' name=txtNomeCliente readonly="readonly"value=''>
+
+<br>
+<label class="labe">CPF:</label>
+<input type="text" class="form-control cliente"id='txtCp' name=txtCp readonly="readonly"value=''>
+
+<br>
+<label class="labe">Email:</label>
+<input type="text" class="form-control cliente"id='txtEmail' name=txtEmail readonly="readonly"value=''>
+
+<br>
+<label class="labe">Entrega Selecionada:</label>
+
+<input type="text" class="form-control ente"id='txtEntregaSelec' name=txtEntregaSelec readonly="readonly"value=''>
+
+<br>
+<label class="labe">Forma de pagamento selecionada:</label>
+
+<input type="text" class="form-control paga" id='txtFormaSelec' name=txtFormaSelec readonly="readonly"value=''>
+<br>
+<label class="labe">Quantidade de Parcelas:</label>
+
+<input type="text" class="form-control paga" id='parcelaSelec' name=txtFormaSelec readonly="readonly"value=''>
+<br>
+<label class="labe">Valor de Parcelas :</label>
+
+<input type="text" class="form-control venda" id='txtFormaSelec2' name=txtFormaSelec readonly="readonly"value=''>
+<br>
+
+<label class="labe">Valor Total da Venda:</label>
+
+<input type="text" class="form-control venda" id='txtValorTotal' name=txtValorTotal readonly="readonly"value=''>
+<br>
+</div><br>
+
+
+<button type="reset" class="btn btn-outline-info" value="atualizar" onclick="reiniciar()" style="width: 100px;">Comprar</button>
+
+</div></div></div>
+
+
+
+<br><br><br><br>
+<br>
+
+
+
+
+<div class="rodape" style="background: #1e2229; height: 470px; width: 100%;">
+
+    <br><br>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm">
+
+       
+              
+              <div class="rodapeLetra"><b>Central de Dúvidas Online</b><br>
+               <div class="rodapeLetra2"> <p> Utilize nosso FAQ, chat online ou email para<br> solucionar suas dúvidas.</p> </div> </div><br>
+
+               <div class="rodapeLetra"><b>Central de Dúvidas Online</b></div>
+                <div class="rodapeLetra2"> <p> Grande São Paulo<br> (11) 2388-8247 </p> </div> 
+
+                <div class="rodapeLetra2"> <p> Rio de Janeiro<br> 0800-730-2557 </p> </div> 
+
+                <div class="rodapeLetra2"> <p> Demais regiões<br> 3003-0009 </p> </div> 
+        </div>
+
+        <div class="col-sm">
+
+       
+              
+            <div class="rodapeLetra"><b>Nossas Lojas</b><br>
+             <div class="rodapeLetra2"> <p> Encontre uma loja Saraiva mais perto<br> de você.</p> </div> </div><br>
+
+             <div class="rodapeLetra"><b>Televendas</b></div>
+              <div class="rodapeLetra2"> <p> Todas as regiões<br> 3003-0009 </p> </div> 
+
+              <div class="rodapeLetra2"> <p> Vendas Corporativas<br> (11) 2388-8245 </p> </div> 
+
+              
+      </div>
+
+      <div class="col-sm">
+
+       
+              
+          <div class="rodapeLetra"><b>Trabalhe Conosco</b>
+           <div class="rodapeLetra2"> <p>Venha fazer parte do nosso time!<br>E venha ser feliz!</p> </div> </div><br>
+
+           <div class="rodapeLetra"><b>Institucional</b></div>
+            <div class="rodapeLetra2"> <p> <a href="#"> Política de Venda e Troca </a> </p> </div> 
+
+            <div class="rodapeLetra2"> <p> <a href="#"> Relações com Investidores </a> </p> </div> 
+
+            <div class="rodapeLetra2"> <p> <a href="#"> Eventos </a> </p> </div> 
+
+            <div class="rodapeLetra2"> <p> <a href="#"> Termos e Condições de Compra </a> </p> </div> 
+    </div>
+
+      </div><br><br>
+
+    </div>
+
+     <div class="fn"> <center> Todos os direitos reservado aos devidos criadores: E3ND e Trompetista ©  </center> </div> 
+
+  </div>
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

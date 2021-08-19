@@ -1,0 +1,111 @@
+body{
+    background: #E8E8E8;
+}
+.name{
+    color: red;
+}
+.topo{
+    background: #1C1C1C;
+   height: 40px;
+}
+.letratopo{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+}
+.op1{
+    font-size: 23px;
+    color: black;
+    padding-top: 40px;
+}
+.lA1{
+    font-size: 14px;
+}
+.lB1{
+    font-size: 12px;;
+}
+.lC1{
+    font-size: 20px;
+}
+.lalala{
+    font-size: 14px;
+    color: white;
+    
+}
+.rodape{
+    font-size: 20px;
+}
+.rodapeLetra{
+    color: white;
+    font-size: 18px;
+}
+.rodapeLetra2{
+    color: white;
+    font-size: 15px;
+}
+.rd{
+    color: white;
+    font-size: 25px;
+}
+.rodapeLetra3{
+    font-size: 20px;
+}
+.fn{
+    color: white;
+    font-size: 10px;
+}
+.top{
+    font-size: 35px;
+    color: #00BFFF;
+}
+
+.mage img{
+    float: left;
+    border: transparent thin solid;
+    padding: 5px;
+    margin: 0px 10px 10px 0;
+    
+}
+.meioo{
+    font-size: 30px;
+    color: #00BFFF;
+}
+.meioo2{
+
+}
+.valores{
+    font-size: 30px;
+    color: #00BFFF;
+}
+.tt{
+    font-size: 25px;
+}
+.fale{
+    font-size: 35px;
+    color: #00BFFF;
+}
+.fale2{
+    font-size: 15px;
+}
+.loja{
+    font-size: 35px;
+    color: #00BFFF;
+}
+.mapa{
+    font-size: 25px;
+}
+iframe {
+    background: #00BFFF;
+    color: #FFF;
+    padding: 10px;
+    border: 5px solid black;
+}
+.for{
+    font-size: 35px;
+    color: #00BFFF;
+}
+.resumo2{
+    font-size: 30px;
+    color: #00BFFF;
+}
